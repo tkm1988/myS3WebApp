@@ -1,9 +1,18 @@
-<html xmlns="http://www.w3.org/1999/xhtml" >
-<head>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
     <title>My Website Home Page</title>
-</head>
+    <script src="js/getAPI.js"></script>
+  </head>
 <body>
-  <h1>Welcome to my website</h1>
-  <p>Now hosted on Amazon S3!</p>
+  <h1>Sample Web App</h1>
+  <h2>北海道はでっかいどう</h2>
+  <p>下の入力欄に「北海道」と入れてください。</p>
+  <form name="HokkaidoDekkaido" id="id_HokkaidoDekkaido" action="">
+  <input name="Input" id="id_HokkaidoTextBox" type="text" value="北海道" >
+  <input type="button" value="Exec" onclick="onButtonClick();" >
+  </form>
+  <p id="output"></p>
 </body>
 </html>

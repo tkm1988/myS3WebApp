@@ -46,3 +46,4 @@ git push -u origin master
 * 例: 独自ドメインを使用して静的ウェブサイトをセットアップする  <https://docs.aws.amazon.com/ja_jp/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html#root-domain-walkthrough-before-you-begin>
 
 * DNSレコード一覧  <https://ja.wikipedia.org/wiki/DNS%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%89%E3%82%BF%E3%82%A4%E3%83%97%E3%81%AE%E4%B8%80%E8%A6%A7>
+* S3のファイルをPythonで取得する <https://shinonono.net/entry/aws-lambda-json-s3>

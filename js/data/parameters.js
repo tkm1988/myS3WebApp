@@ -1,6 +1,4 @@
-"use strict";
-exports.__esModule = true;
-var params = {
+const params = {
     url: 'https://api.tkm-webapp.ml/dev'
 };
-exports["default"] = params;
+export default params;

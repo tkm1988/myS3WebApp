@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./getAPI.ts");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./requestAPI.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,15 +98,15 @@ eval("__webpack_require__.r(__webpack_exports__);\nvar params = {\n    url: 'htt
 
 /***/ }),
 
-/***/ "./getAPI.ts":
-/*!*******************!*\
-  !*** ./getAPI.ts ***!
-  \*******************/
+/***/ "./requestAPI.ts":
+/*!***********************!*\
+  !*** ./requestAPI.ts ***!
+  \***********************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _data_parameters__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data/parameters */ \"./data/parameters.ts\");\n\nfunction onButtonCilck() {\n    var url = _data_parameters__WEBPACK_IMPORTED_MODULE_0__[\"default\"].url;\n    var request_text = document.getElementById(\"id_HokkaidoTextBox\").textContent;\n    var request_data = {\n        body: {\n            text: request_text\n        }\n    };\n    jQuery.ajax({\n        type: \"post\",\n        url: url,\n        data: JSON.stringify(request_data),\n        contentType: 'application/json',\n        dataType: \"json\",\n    }).then(function (data) { return alert('Success'); }, function (error) { return alert('Error'); });\n}\n\n\n//# sourceURL=webpack:///./getAPI.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _data_parameters__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data/parameters */ \"./data/parameters.ts\");\n\nfunction onButtonCilck() {\n    var url = _data_parameters__WEBPACK_IMPORTED_MODULE_0__[\"default\"].url;\n    var request_text = document.getElementById(\"id_HokkaidoTextBox\").textContent;\n    var request_data = {\n        body: {\n            text: request_text\n        }\n    };\n    jQuery.ajax({\n        type: \"post\",\n        url: url,\n        data: JSON.stringify(request_data),\n        contentType: 'application/json',\n        dataType: \"json\",\n    }).then(function (data) { return alert('Success'); }, function (error) { return alert('Error'); });\n}\n\n\n//# sourceURL=webpack:///./requestAPI.ts?");
 
 /***/ })
 

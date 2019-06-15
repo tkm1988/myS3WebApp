@@ -4,10 +4,10 @@ module.exports = {
   mode: "development",
 
   // メインとなるJavaScriptファイル（エントリーポイント）
-  entry: "./getAPI.ts",
+  entry: "./requestAPI.ts",
   output: {
-       path: __dirname + '/dist',
-       filename: 'getAPI.js'
+      path: __dirname + '/dist',
+      filename: 'requestAPI.js'
   },
   module: {
     rules: [

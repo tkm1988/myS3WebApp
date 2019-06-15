@@ -1,10 +1,10 @@
-import 'jquery'
+import * as $ from 'jquery'
 import params from './data/parameters';
 
 function onButtonCilck() {
-    let url: string  = params.url;
-    let request_text: string = document.getElementById("id_HokkaidoTextBox").textContent;
-    let request_data: JSONRequest = {
+    const url: string  = params.url;
+    const request_text: string = document.getElementById("id_HokkaidoTextBox")!.textContent!;
+    const request_data: JSONRequest = {
         body : {
             text : request_text
         }

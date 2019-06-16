@@ -1,7 +1,13 @@
-import * as $ from 'jquery'
+//import * as $ from 'jquery'
 import params from './data/parameters';
 
-function onButtonCilck() {
+interface JSONRequest {
+    body : {
+        text: string
+    }
+}
+
+function onButtonClick() {
     const url: string  = params.url;
     const request_text: string = document.getElementById("id_HokkaidoTextBox")!.textContent!;
     const request_data: JSONRequest = {
@@ -22,8 +28,6 @@ function onButtonCilck() {
     );
 }
 
-interface JSONRequest {
-    body : {
-        text: string
-    }
-}
+const execButton = document.getElementById("execbutton")!;
+execButton.addEventListener("click", (e:Event) => onButtonClick());
+

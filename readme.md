@@ -50,3 +50,7 @@ git push -u origin master
 * あの手この手でTypeScriptからJSON形式データをimportする  <https://qiita.com/oganyanATF/items/65dfcc4dd25c028ea403>
 * JavaScriptよさらば。「TypeScript」で始めるECMAScript 2015  <https://www.tcmobile.jp/dev_blog/devtool/javascript%E3%82%88%E3%81%95%E3%82%89%E3%81%B0%E3%80%82%E3%80%8Ctypescript%E3%80%8D%E3%81%A7%E5%A7%8B%E3%82%81%E3%82%8Becmascript-2015/>
 * JavaScriptでidから要素を取得する方法：getElementById()  <https://uxmilk.jp/11593>
+* Webpackについて <https://qiita.com/IgnorantCoder/items/d26083d9f886ca66d4ae>
+* Object is possibly 'null'.の対応 <https://teratail.com/questions/130598>
+* jQueryのインストール <https://stackoverflow.com/questions/38283236/typescript-and-jquery-compile-error-cannot-find-name/41095886>
+* node_modulesをgit pushしてしまった時の対処git rm <https://techacademy.jp/magazine/10252>

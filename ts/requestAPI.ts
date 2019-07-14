@@ -19,6 +19,7 @@ function onButtonClick() {
     jQuery.ajax({
         type:"post",
         url:url,
+        crossDomain:true,
         data:JSON.stringify(request_data),
         contentType: 'application/json',
         dataType: "json",

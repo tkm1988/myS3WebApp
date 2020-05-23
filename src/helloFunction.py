@@ -1,5 +1,8 @@
 import json
 import boto3
+import logging
+
+logger = logging.getLogger()
 
 def lambda_handler(event, context):
     s3                    = boto3.client('s3')
@@ -9,20 +12,31 @@ def lambda_handler(event, context):
     jsonfile_body         = s3_response_data['Body'].read().decode('utf-8')
     response_dictionary   = json.loads(jsonfile_body)
     
-    payload               = event['body']['text']
+    print(json.loads(event['body'])['body']['text'])
+    payload               = json.loads(event['body'])['body']['text']
     response_text         = response_dictionary.get(payload, '????')
+    print(response_text)
     
     if response_text == '????' :
-        return{
+        return {
             "isBase64Encoded": True,
             'statusCode': 404,
-            'headers': {},
+            'headers': {
+                "Access-Control-Allow-Origin" : "*", 
+                "Access-Control-Allow-Credentials": True,
+                "Access-Control-Allow-Headers": "Content-Type"
+            },
             'body': json.dumps(response_text)
         }
     else:
         return {
             "isBase64Encoded": True,
             'statusCode': 200,
-            'headers': {},
+            'headers': {
+                "Access-Control-Allow-Origin" : "*", 
+                "Access-Control-Allow-Credentials": True,
+                "Access-Control-Allow-Headers": "Content-Type"
+            },
             'body': json.dumps(response_text)
         }
+    

@@ -4,15 +4,37 @@
     <meta charset="UTF-8">
     <title>My Website Home Page</title>
     <script type="module" src="js/requestAPI.js"></script>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   </head>
-<body>
-  <h1>Sample Web App</h1>
-  <h2>北海道はでっかいどう</h2>
-  <p>下の入力欄に「北海道」と入れてください。</p>
-  <form name="HokkaidoDekkaido" id="id_HokkaidoDekkaido" action="">
-  <input name="Input" id="id_HokkaidoTextBox" type="text" value="北海道" />
-  <input type="button" value="Exec" id="execbutton" />
-  </form>
-  <p id="output"></p>
-</body>
+  <body>
+    <div class="container">
+      <div class="cald-panel light-blue darken-4 card-content white-text z-depth-1">
+        <h3 class="left-align">Sample Web App</h3>
+      </div>
+      <div class="cald-panel white">
+        <h5>北海道はでっかいどう</h5>
+        <p>下の入力欄に「北海道」と入れてください。</p>
+        <form name="HokkaidoDekkaido" id="id_HokkaidoDekkaido" action="">
+          <input name="Input" id="id_HokkaidoTextBox" type="text" value="北海道" />
+          <button class="btn-small waves-effect light-blue darken-4" type="button" id="execbutton">
+            実行
+            <i class="material-icons right">send</i>
+          </button>
+        </form>
+      </div>
+      <div class="cald-panel white">
+        <p id="output"></p>
+      </div>
+    </div>
+  </body>
 </html>

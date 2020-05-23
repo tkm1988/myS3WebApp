@@ -8,11 +8,12 @@ module.exports = {
     // モード値を production に設定すると最適化された状態で、
     // development に設定するとソースマップ有効でJSファイルが出力される
     mode: "development",
-
+    devtool: 'inline-source-map',
+    
     // メインとなるJavaScriptファイル（エントリーポイント）
     entry: "./requestAPI.ts",
     output: {
-        path: __dirname + '/dist',
+        path: __dirname + '/../js/',
         filename: 'requestAPI.js'
     },
     module: {

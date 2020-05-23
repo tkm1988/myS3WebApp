@@ -9,7 +9,11 @@ interface JSONRequest {
 
 function onButtonClick() {
     const url: string  = params.url;
-    const request_text: string = document.getElementById("id_HokkaidoTextBox")!.textContent!;
+    
+    const element: HTMLInputElement = <HTMLInputElement>document.getElementById("id_HokkaidoTextBox");
+    const output: HTMLElement = <HTMLElement>document.getElementById("output");
+    
+    const request_text: string = element.value;
     const request_data: JSONRequest = {
         body : {
             text : request_text
@@ -23,12 +27,15 @@ function onButtonClick() {
         data:JSON.stringify(request_data),
         contentType: 'application/json',
         dataType: "json",
-    }).then(
-        data => alert('Success'), 
-        error => alert('Error')
-    );
+    }).done( (data) => {
+        output.textContent = data;
+    }).fail( (jqXHR, textStatus, errorThrown) => {
+        alert("error");
+        $("#XMLHttpRequest").html("XMLHttpRequest : " + jqXHR.status);
+        $("#textStatus").html("textStatus : " + textStatus);
+        $("#errorThrown").html("errorThrown : " + errorThrown);
+    });
 }
 
 const execButton = document.getElementById("execbutton")!;
 execButton.addEventListener("click", (e:Event) => onButtonClick());
-

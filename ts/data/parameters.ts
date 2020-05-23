@@ -3,7 +3,7 @@ interface APIParams {
 }
 
 const params: APIParams = {
-     url: 'https://api.tkm-webapp.ml/dev'
+     url: 'https://api.tkm-webapp.ml/dev/proxy'
  };
 
 export default params;
